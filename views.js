@@ -31,8 +31,10 @@ const todoList = {
         })
     },
     renderTasks(list = tasks.list) {
+        
         this.taskList.innerHTML = null;
-        list.forEach(task => {
+        tasks.list.forEach(task => {
+            // debugger;
             this.taskList.innerHTML += `
             <li class="tasks-list__task-wrap ${task.important ? 'tasks-list__task-wrap--active' : ''} ${task.completed ? 'tasks-list__task-wrap--complete' : ''}" id="${task.id}">
                 <div class="tasks-list__task">
