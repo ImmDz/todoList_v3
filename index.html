@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body data-id-theme="light-theme">
+    <div class="container">
+        <div class="modal-window">
+            <div class="modal-window__content">
+                <h2>edit</h2>
+                <label><input id="newTitle" type="text" name="title" placeholder="New Title"></label>
+                <label><input id="newDescription" type="text" name="description" placeholder="New Description"></label>
+                <button id="save" type="button">Save</button>
+                <button id="close" type="button">Close</button>
+            </div>
+        </div>
+        <label class="theme-changer">
+            <input class="theme-changer__wrap" type="checkbox">
+            <span class="theme-changer__switch"></span>
+        </label>
+        <h1 class="main-title">To-do List</h1>
+        <form class="form">
+            <label class="form__label-title">
+                <input class="form__input-title" type="text" name="title" required>
+                <span>Title</span>
+                <i></i>
+            </label>
+            <label class="form__label-description">
+                <input class="form__input-description" type="text" name="description" required>
+                <span>Description</span>
+                <i></i>
+            </label>
+            <button class="form__button-add" type="submit">Add</button>
+        </form>
+        <div class="search-wrap">
+            <div class="search-icon"></div>
+            <input class="search-input" type="search" placeholder="search">
+        </div>
+        <div class="filter-block">
+            <input class="filter-block__select-box" type="text" placeholder="filter" readonly>
+            <ul class="filter-block__options">
+                <li id="all" class="filter-block__option">All</li>
+                <li id="complete" class="filter-block__option">Complete</li>
+                <li id="incomplete" class="filter-block__option">Incomplete</li>
+            </ul>
+        </div>
+        <ul class="tasks-list">
+        </ul>
+    </div>
+</body>
+<script type="module" src="views.js"></script>
+
+</html>
