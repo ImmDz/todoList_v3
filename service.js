@@ -23,9 +23,9 @@ export const storage = {
     setFilter(filter) {
         sessionStorage.setItem("filter", JSON.stringify(filter));
     },
-    getList() {
+    getList(defaultTasksList = []) {
         const list = sessionStorage.getItem("list");
-        return JSON.parse(list);
+        return list ?  JSON.parse(list) : defaultTasksList;
     },
     setList(list) {
         sessionStorage.setItem("list", JSON.stringify(list));

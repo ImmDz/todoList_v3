@@ -35,6 +35,7 @@ const todoList = {
   },
   renderTasks(list = tasks.list) {
     this.taskList.innerHTML = null;
+    console.log(list);
     list.forEach((task) => {
       this.taskList.innerHTML += `
             <li class="tasks-list__task-wrap ${
@@ -125,33 +126,6 @@ const todoList = {
           storage.setFilter("incomplete");
         }
       });
-
-      // tasks.filterTask();
-      // tasks.list.forEach(task => {
-      //     if (e.target.id === "all") {
-      //         this.renderTasks();
-      //     }
-      //     if (e.target.id === "complete") {
-      //         filteredArray = tasks.list.filter(task => {
-      //             if (task.completed === true) {
-      //                 return task;
-      //             }
-      //         })
-      //         this.renderTasks(filteredArray);
-      //     }
-      //     if (e.target.id === "incomplete") {
-      //         filteredArray = tasks.list.filter(task => {
-      //             if (task.completed === false) {
-      //                 return task;
-      //             }
-      //         })
-      //         this.renderTasks(filteredArray);
-      //     }
-
-      // })
-      // storage.setList(filteredArray);
-      // console.log(filteredArray);
-      // filteredArray.length = 0;
     });
 
     this.filterList.addEventListener("click", (e) => {
